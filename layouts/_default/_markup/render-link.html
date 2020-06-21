@@ -1,0 +1,20 @@
+{{ $url := .Destination }}
+{{ $findThis := "/redirect/" }}
+{{ $hasIt := in $url $findThis }}
+{{ $hasItPrefix := strings.HasPrefix $url $findThis }}
+{{ $hasItPrefix2 := hasPrefix $url $findThis }}
+{{ $findMe := findRE "" $url }}
+<a
+        href="{{ .Destination | safeURL }}"
+        {{ with .Title}} title="{{ . }}"{{ end }}
+        {{ if strings.HasPrefix $url "http" }}
+            target="_blank"
+        {{ end }}
+>.Text = {{ .Text | safeHTML }}</a><br />
+$url = {{ $url }}<br />
+$hasIt = {{ $hasIt }} <br />
+$hasItPrefix = {{ $hasItPrefix }} <br />
+replace = {{ replace $url $findThis "" }}<br />
+printf "%T" (.Destination | safeURL ) = {{ printf "%T" (.Destination | safeURL) }}<br />
+printf "%T" .Destination = {{ printf "%T" .Destination }}<br />
+<!--{{ $findMe }}<br />-->

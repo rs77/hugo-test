@@ -1,0 +1,31 @@
+// colors
+$color-primary: #8AA2D3 !default; // https://irocore.com/aofuji/
+$color-primary-dark: #3B469B !default; // https://irocore.com/aomurasaki/
+$color-secondary: #8F82BC !default; // https://irocore.com/fujimurasaki/
+$color-mute: #9EA1A3 !default; // https://irocore.com/suzu-iro/
+$color-spliter: #E5E2E4 !default; // https://irocore.com/komachinezu/
+$color-bg: #FFFFFD !default; // https://irocore.com/shiro/
+
+// font size list
+$font-size-logo: 2rem !default; // Logo Only
+$font-size-l1: 1.75rem !default; // Primer CSS H1
+$font-size-l2: 1.5rem !default; // Primer CSS H2
+$font-size-l3: 1.25rem !default; // Primer CSS H3
+$font-size-l4: 1rem !default; // Primer CSS H4 & Normal Text
+
+// divider css
+$spliter: 2px solid $color-spliter !default;
+
+@font-face {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}

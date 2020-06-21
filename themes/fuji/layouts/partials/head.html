@@ -1,0 +1,13 @@
+<!-- basic meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- global main css -->
+{{ $options := (dict "targetPath" "css/main.min.css" "outputStyle" "compressed") }}
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
